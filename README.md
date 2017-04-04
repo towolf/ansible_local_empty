@@ -1,3 +1,12 @@
+My fact:
+
+```
+$ head /etc/ansible/facts.d/my.fact
+[greeting]
+message="Hi, Brian"
+```
+ansible_local is empty when accessed from role:
+
 ```
 $ ansible-playbook -c local -i localhost, test-ansible-local.yml -v                                                                          
 No config file found; using defaults                                                                                                                                                              
