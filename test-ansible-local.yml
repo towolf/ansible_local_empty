@@ -3,9 +3,24 @@
 - name: Why is ansible_local lost?
   hosts: all
 
-  pre_tasks:
+  tasks:
+    - debug:
+        var: ansible_local
     - debug:
         var: ansible_local
 
-  roles:
-    - roles/role1
+    - name: one more time
+      setup:
+
+    - debug:
+        var: ansible_local
+    - debug:
+        var: ansible_local
+
+    - name: even lost after this
+      setup:
+
+    - debug:
+        var: inventory_hostname
+    - debug:
+        var: ansible_local
