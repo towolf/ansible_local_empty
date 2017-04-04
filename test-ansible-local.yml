@@ -1,0 +1,11 @@
+---
+
+- name: Why is ansible_local lost?
+  hosts: all
+
+  pre_tasks:
+    - debug:
+        var: ansible_local
+
+  roles:
+    - roles/role1
